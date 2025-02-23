@@ -6,10 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:reset": "npx prisma migrate reset"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",
@@ -33,6 +34,7 @@
     "postcss": "^8",
     "prisma": "^6.4.1",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.3",
     "typescript": "^5"
   }
 }
