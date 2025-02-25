@@ -48,9 +48,6 @@ function dbGameToGameEntity (game: Game & {players: User[]; winner?: User | null
         field: fieldSchema.parse(game.field),
       } satisfies GameOverEntity
     }
-    default: {
-      throw new Error(`Unknown game status: ${game.status}`);
-    }
   }
 }
 
