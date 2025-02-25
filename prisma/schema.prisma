@@ -15,11 +15,12 @@ datasource db {
 
 model Game {
   id         String     @id @default(cuid())
-  type       GameStatus
+  status     GameStatus
   players    User[]     @relation("games")
   winner     User?      @relation(fields: [winnerId], references: [id])
   winnerId   String
   isDraw     Boolean?
+  field      Json?
   gameOverAt String?
 }
 
